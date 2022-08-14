@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box
+        }
+
+        section {
+            padding: 60px 15px;
+            max-width: 600px;
+            width: 100%;
+            margin: 0px auto;
+        }
+
+        section > h1 {
+            font-family: 'Rubik Distressed', cursive;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: capitalize;
+            font-weight: normal;
+        }
+
+        .accordion {
+            border: 1px solid;
+            border-color: #f2f2f2 transparent #f2f2f2 transparent;
+            background-color: #f2f2f200;
+            padding: 10px 0em;
+            margin-bottom: 20px;
+        }
+
+        .accordion .ask {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .accordion .ask h2 {
+            font-weight: normal;
+            color: #545151;
+        }
+
+        @media (max-width: 767px) {
+            .accordion .ask h2 {
+                font-size: 1.25rem;
+            }
+        }
+
+        .accordion .ask i {
+            color: #4d4d4d;
+        }
+
+        .accordion .ask i:hover{
+            cursor: pointer;
+        }
+
+        .accordion .answer {
+            color: #777;
+            line-height: 1.6;
+            height: 0;
+            opacity: 0;
+            transition: all 0.5ms linear;
+        }
+
+        .accordion .answer ul,
+        .accordion .answer p {
+            padding-top: 20px;
+        }
+
+        .accordion .answer ul {
+            list-style: decimal;
+            padding-left: 20px;
+        }
+
+        .show-answer {
+            height: auto!important;
+            opacity: 1!important;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>different ways to say thank you</h1>
+        <div class="accordion">
+            <div class="ask">
+                <h2>How do you say thank you politely?</h2>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="answer">
+                <ul>
+                    <li>I appreciate what you did.</li>
+                    <li>Thank you for thinking of me.</li>
+                    <li>Thank you for your time today.</li>
+                    <li>I value and respect your opinion.</li>
+                    <li>I am so thankful for what you did.</li>
+                    <li>I wanted to take the time to thank you.</li>
+                    <li>I really appreciate your help. Thank you.</li>
+                    <li>Your kind words warmed my heart.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="ask">
+                <h2>How do you say thank you in Old English?</h2>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="answer">
+                <p>From Middle English thank, from Old English þanc (“thought, favour, grace, pleasure, satisfaction,
+                    thanks”), from Proto-Germanic *þankaz (“thought, remembrance, gratitude”), from Proto-Indo-European
+                    *tong-, *teng- (“to think”).
+                </p>
+            </div>
+        </div>
+        <div class="accordion">
+            <div class="ask">
+                <h2>Is OK thank you polite?</h2>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="answer">
+                <p>
+                    Yes, that's definitely possible. And the "thank you" would be a polite but reluctant thank you.
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
